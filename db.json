@@ -1,14 +1,22 @@
 {
   "events": [
     {
-      "hours": 23,
-      "salary": 45,
-      "id": "2023-01"
+      "id": "2023-9",
+      "hours": 9,
+      "salary": 9,
+      "finalSalary": 9
     },
     {
-      "id": "2023-02",
-      "hours": 0,
-      "salary": 0
+      "id": "2023-8",
+      "hours": 8,
+      "salary": 8,
+      "finalSalary": 8
+    },
+    {
+      "id": "2023-7",
+      "hours": 7,
+      "salary": 7,
+      "finalSalary": 7
     }
   ]
 }
