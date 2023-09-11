@@ -18,11 +18,13 @@ setInterval(() => {
   console.log("Data backed up.");
 }, 60000); // Back up every minute
 
-// Restore data on server start if the backup file exists
+// Restore data on server start if the backup file exists, but with a delay
 if (fs.existsSync(backupFilePath)) {
-  const backupData = JSON.parse(fs.readFileSync(backupFilePath, "utf-8"));
-  router.db.setState(backupData);
-  console.log("Data restored from backup.");
+  setTimeout(() => {
+    const backupData = JSON.parse(fs.readFileSync(backupFilePath, "utf-8"));
+    router.db.setState(backupData);
+    console.log("Data restored from backup.");
+  }, 60000); // Delay the restore by one minute
 }
 
 server.listen(port);
